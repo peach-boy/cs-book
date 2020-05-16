@@ -1,8 +1,9 @@
 # 帮助文档
 
 
-### docsify使用
+### docsify使用命令
 本地预览：docsify serve ./
 
 ### 参考文档
-[手把手教你搭建一个文档类型的网站!](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247486555&idx=2&sn=8486026ee9f9ba645ff0363df6036184&chksm=cea24390f9d5ca86ff4177c0aca5e719de17dc89e918212513ee661dd56f17ca8269f4a6e303&token=298703358&lang=zh_CN#rd)
+* [手把手教你搭建一个文档类型的网站!](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247486555&idx=2&sn=8486026ee9f9ba645ff0363df6036184&chksm=cea24390f9d5ca86ff4177c0aca5e719de17dc89e918212513ee661dd56f17ca8269f4a6e303&token=298703358&lang=zh_CN#rd)
+* [giteepro域名自定义](https://gitee.com/help/articles/4228#article-header0)
