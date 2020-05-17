@@ -1,4 +1,4 @@
-## mysql中的锁(InnoDB)
+# mysql中的锁(InnoDB)
 
 ### 行级锁
 1. 共享锁（S lock）:允许事务读一行数据

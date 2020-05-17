@@ -1,4 +1,4 @@
-## Iterator循环删除list中元素
+# Iterator循环删除list中元素
 
 ### 一、业务场景
 当我们需要剔除list中的某些元素时，通常的做法就是循环遍历list,然后符合条件时remove掉该元素。

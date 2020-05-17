@@ -1,4 +1,3 @@
-<!-- TOC -->
 
 - [一文搞懂 RabbitMQ 的重要概念以及安装](#一文搞懂-rabbitmq-的重要概念以及安装)
     - [一 RabbitMQ 介绍](#一-rabbitmq-介绍)

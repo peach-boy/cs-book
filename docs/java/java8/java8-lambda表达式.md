@@ -1,4 +1,4 @@
-## java8-lambda表达式
+# java8-lambda表达式
 
 ## lamda表达式 ##
 java8中lamda表达式的引入，标志着java开始拥抱主流函数式编程语言，其实lamda表达式并不是什么新鲜事物，在JavaScript中早已存在。作为经典语言引入lamda表达式以及java8中的其他新特性，如流式处理，会一定程度上让代码更简洁，当然还是无法和JavaScript这类语言相比，但这也正是各自所处的角色的不同决定的。

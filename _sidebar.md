@@ -1,23 +1,9 @@
 * [首页](README.md)
 * java
-    * 基础
-        * [基础语法](./docs/java/基础/基础语法.md)
-        * [基本类型与包装类型](/docs/java/基础/基本类型与包装类型.md)
-        * [关键字](/docs/java/基础/关键字.md)
-        * [异常处理](/docs/java/基础/异常处理.md)
-        * [四种引用的区别](/docs/java/基础/强引用、软引用、弱引用、幻象引用有什么区别.md)
-        * [反射](/docs/java/基础/反射.md)
-        * [动态代理] todo
-        * [泛型] todo
+    * [基础篇](./docs/java/基础/基础.md)  
     * 并发
-        * [java线程的生命周期](/docs/java/并发/java线程的生命周期.md)
-        * [synchronized详解](/docs/java/并发/synchronized详解.md)
-        * [volatile的原理](/docs/java/并发/volatile的原理.md)
-        * [锁的升级](/docs/java/并发/锁的升级.md)
-        * [cas操作,unsafe类和原子类](/docs/java/并发/cas操作,unsafe类和原子类.md)
-        * [ThreadPoolExecutor原理简析](/docs/java/并发/ThreadPoolExecutor原理简析.md)
-        * [FutureTask,Future和Callable](/docs/java/并发/FutureTask,Future和Callable.md)
-        * [并发工具类](/docs/java/并发/并发工具类.md)
+        * [底层原理篇](/docs/java/并发/底层原理篇.md)
+        * [应用篇](/docs/java/并发/应用篇.md)
 
     * 容器
         * [HashMap原理](/docs/java/容器/HashMap原理.md)
@@ -83,10 +69,10 @@
     * [幂等性](/docs/分布式系统设计/幂等性.md)
     * [分布式会话]TODO
 * 网络与操作系统    
-    * 网络协议基础
-    * https原理
+    * 网络协议基础TODO
+    * https原理TODO
     * [linux常用命令](/docs/网络与操作系统/linux常用命令.md)
-    * nginx
+    * nginxTODO
 
 * 前端
     * vue
@@ -110,13 +96,16 @@
 * 思想和规范
     * 领域驱动设计
         * [领域驱动设计在美团点评业务系统的实践](https://yq.aliyun.com/docss/319159?utm_content=m_38302)
+        * [如何写复杂业务代码](https://yq.aliyun.com/articles/712581?spm=a2c4e.11155435.0.0.7c0d1500X9Q5mO)
     * 敏捷开发
 * 工具
     * git
         * [git命令小记](/docs/工具/git/git命令小记.md)
 * 其他
+    * [本站点帮助文档](/docs/others/help.md)
     * [github markdown guide](https://guides.github.com/features/mastering-markdown/) 
     * [设计模式在线学习网站](https://refactoringguru.cn/)
+    * [数组结构在线学习网站](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
     * [git在线演示学习网站](https://oschina.gitee.io/learn-git-branching/)
 * 写给自己
     * [一次线上事故的反思](/docs/写给自己/一次线上事故的反思.md)

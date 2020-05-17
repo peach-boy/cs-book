@@ -1,4 +1,4 @@
-## interceptor配合ThreadLocal实现全局变量存取
+# interceptor配合ThreadLocal实现全局变量存取
 
 
 一. 业务场景

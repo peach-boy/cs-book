@@ -1,4 +1,4 @@
-## spring生命周期
+# spring生命周期
 
 ```
 protected void invokeInitMethods(String beanName, final Object bean, RootBeanDefinition mbd)
