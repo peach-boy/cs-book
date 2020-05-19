@@ -2,6 +2,8 @@
 
 
 ### docsify使用命令
+安装依赖：npm i docsify-cli -g
+
 本地预览：docsify serve ./
 
 ### 参考文档

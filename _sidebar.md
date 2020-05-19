@@ -36,7 +36,7 @@
         * [springboot之参数传递]TODO
         * [springboot之时间处理]TODO
         * [springboot之参数校验]TODO
-        * [springboot之常用注解](/docs/框架/springboot/springboot常用注解.md)
+        * [springboot之常用注解](/docs/框架/springboot/springboot之常用注解.md)
         * [springboot之自动配置]TODO
     * mybatis
         * [mybatis使用经验](/docs/框架/mybatis/mybatis使用经验.md)
@@ -101,12 +101,7 @@
 * 工具
     * git
         * [git命令小记](/docs/工具/git/git命令小记.md)
-* 其他
-    * [本站点帮助文档](/docs/others/help.md)
-    * [github markdown guide](https://guides.github.com/features/mastering-markdown/) 
-    * [设计模式在线学习网站](https://refactoringguru.cn/)
-    * [数组结构在线学习网站](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-    * [git在线演示学习网站](https://oschina.gitee.io/learn-git-branching/)
+* [网址收藏](/docs/others/网址收藏.md)
 * 代码之外
     * [一次线上事故的反思](/docs/代码之外/一次线上事故的反思.md)
     * [关于提升工作效率的一点思考](/docs/代码之外/关于提升工作效率的一点思考.md)
