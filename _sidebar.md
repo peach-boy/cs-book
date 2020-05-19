@@ -107,8 +107,8 @@
     * [设计模式在线学习网站](https://refactoringguru.cn/)
     * [数组结构在线学习网站](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
     * [git在线演示学习网站](https://oschina.gitee.io/learn-git-branching/)
-* 写给自己
-    * [一次线上事故的反思](/docs/写给自己/一次线上事故的反思.md)
-    * [关于提升工作效率的一点思考](/docs/写给自己/关于提升工作效率的一点思考.md)
+* 代码之外
+    * [一次线上事故的反思](/docs/代码之外/一次线上事故的反思.md)
+    * [关于提升工作效率的一点思考](/docs/代码之外/关于提升工作效率的一点思考.md)
 
 

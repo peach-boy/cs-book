@@ -69,10 +69,10 @@
     * [幂等性](/docs/分布式系统设计/幂等性.md)
     * [分布式会话]TODO
 * 网络与操作系统    
-    * 网络协议基础
-    * https原理
+    * 网络协议基础TODO
+    * https原理TODO
     * [linux常用命令](/docs/网络与操作系统/linux常用命令.md)
-    * nginx
+    * nginxTODO
 
 * 前端
     * vue
@@ -107,8 +107,8 @@
     * [设计模式在线学习网站](https://refactoringguru.cn/)
     * [数组结构在线学习网站](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
     * [git在线演示学习网站](https://oschina.gitee.io/learn-git-branching/)
-* 写给自己
-    * [一次线上事故的反思](/docs/写给自己/一次线上事故的反思.md)
-    * [关于提升工作效率的一点思考](/docs/写给自己/关于提升工作效率的一点思考.md)
+* 代码之外
+    * [一次线上事故的反思](/docs/代码之外/一次线上事故的反思.md)
+    * [关于提升工作效率的一点思考](/docs/代码之外/关于提升工作效率的一点思考.md)
 
 
