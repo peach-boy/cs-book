@@ -11,7 +11,7 @@
     * JVM
         * [JVM之内存模型](/docs/java/JVM/JVM之内存模型.md)
         * [JVM之类加载机制]TODO
-        * [JVM之垃圾回收]TODO
+        * [JVM之垃圾回收](/docs/java/JVM之垃圾回收算法.md)
     * java8
         * [java8-lambda表达式](/docs/java/java8/java8-lambda表达式.md)
         * [java8-streamApi](/docs/java/java8/java8-streamApi.md)
@@ -36,7 +36,7 @@
         * [springboot之参数传递]TODO
         * [springboot之时间处理]TODO
         * [springboot之参数校验]TODO
-        * [springboot之常用注解](/docs/框架/springboot/springboot常用注解.md)
+        * [springboot之常用注解](/docs/框架/springboot/springboot之常用注解.md)
         * [springboot之自动配置]TODO
     * mybatis
         * [mybatis使用经验](/docs/框架/mybatis/mybatis使用经验.md)
@@ -51,7 +51,8 @@
         * [redis专题之缓存穿透，缓存击穿，缓存雪崩](/docs/中间件/redis/redis专题之缓存穿透，缓存击穿，缓存雪崩.md)
         * [redis专题之集群高可用部署方案](/docs/中间件/redis/redis专题之集群高可用部署方案.md)
     * [rabbitmq](中间件)
-        * [rabbitmq](/docs/中间件/rabbitmq/rabbitmq.md)
+        * [基础篇](/docs/中间件/rabbitmq/基础篇.md)
+        * [进阶篇](/docs/中间件/rabbitmq/进阶篇.md)
     * [elasticjob]TODO
     * [elasticSearch]TODO
     * [zookeeper]TODO
@@ -101,12 +102,7 @@
 * 工具
     * git
         * [git命令小记](/docs/工具/git/git命令小记.md)
-* 其他
-    * [本站点帮助文档](/docs/others/help.md)
-    * [github markdown guide](https://guides.github.com/features/mastering-markdown/) 
-    * [设计模式在线学习网站](https://refactoringguru.cn/)
-    * [数组结构在线学习网站](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-    * [git在线演示学习网站](https://oschina.gitee.io/learn-git-branching/)
+* [网址收藏](/docs/others/网址收藏.md)
 * 代码之外
     * [一次线上事故的反思](/docs/代码之外/一次线上事故的反思.md)
     * [关于提升工作效率的一点思考](/docs/代码之外/关于提升工作效率的一点思考.md)
