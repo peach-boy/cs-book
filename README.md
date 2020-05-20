@@ -11,7 +11,7 @@
     * JVM
         * [JVM之内存模型](/docs/java/JVM/JVM之内存模型.md)
         * [JVM之类加载机制]TODO
-        * [JVM之垃圾回收](/docs/java/JVM之垃圾回收算法.md)
+        * [JVM之垃圾回收](/docs/java/JVM/JVM之垃圾回收算法.md)
     * java8
         * [java8-lambda表达式](/docs/java/java8/java8-lambda表达式.md)
         * [java8-streamApi](/docs/java/java8/java8-streamApi.md)
