@@ -98,13 +98,15 @@ public @interface Transactional {
 
 ### 二、事务的嵌套
 
-#### 示例代码
+#### 示例代码：模拟一个支付过程，1.支付单落库--->2.扣减商家和个人账户余额3--->.给下单人发红包
 ```
     public Boolean singlePay(SinglePayRequest request) {
         //落订单库
         saveOrder(request);
         //更新账户,因賬戶余额不足，抛出异常
         updateAccount(request);
+        //发放红包
+        redPacketService.sendRedPacket(request);
         return Boolean.TRUE;
     }
     public void saveOrder(SinglePayRequest request) {
@@ -121,6 +123,14 @@ public @interface Transactional {
         addSellerAccount(request.getSellerAccountId(), request.getTradeAmount());
         //买家账户扣减，因賬戶余额不足，抛出异常
         substratConsumerAccount(request.getPayerAccountId(), request.getTradeAmount());
+    }
+
+    public Boolean sendRedPacket(SinglePayRequest request) {
+         //支付金额大于100,,发放失败
+        if(request.getTradeAmount().compareTo(new BigDecimal(100))>0){
+            throw new RuntimeException("红包发放失败");
+        }
+        return Boolean.TRUE;
     }
      public void addSellerAccount(Integer sellerAccountId, BigDecimal tradeAmount) {
         AccountDO accountDO = accountMapper.getById(sellerAccountId);
@@ -139,18 +149,31 @@ public @interface Transactional {
 ```
 
 
-#### 场景一：外层方法无注解，内层方法有注解或无注解(结论显示有无注解结果一样)
+#### 场景一：同一个service中,外层方法无注解，内层方法有注解或无注解(结论显示有无注解结果一样)
 * 伪代码
 ```
 singlePay->saveOrder    
          -> updateAccount(@Transactional)
 ```
 
-* 现象：最终结果singlePay以无事务的方式执行，substratConsumerAccount抛出异常，但是addSellerAccount，saveOrder都正常执行。
-* 结论：外层方法无@Transactional注解，内层方法有注解或无注解，整个调用链都会以无事务的方式执行
+* 现象：substratConsumerAccount抛出异常，但是addSellerAccount，saveOrder都正常执行，不会回滚。
+* 结论：同一个service中，外部无注解，内层有注解或无注解，整个调用链都会以无事务方式执行
 
 
-#### 场景二：外层方法有注解(required)，内层方法有注解（required）
+
+#### 场景二：不同service中,外层方法无注解，内层方法有注解
+* 伪代码
+```
+singlePay->saveOrder    
+         -> updateAccount(@Transactional)
+         ->sendredPacket
+```
+
+* 现象：substratConsumerAccount异常，addSellerAccount回滚，saveOrder不回滚。sendredPacket异常，updateAccount和saveOrder都不回滚
+* 结论：外层无事务，内层有事务
+
+
+#### 场景三：不同service中，外层方法有注解(required)，内层方法有注解（required）
 * 伪代码
 ```
 singlePay(required)->saveOrder    
@@ -160,7 +183,7 @@ singlePay(required)->saveOrder
 * 现象：singlePay整个调用链在同一个事务中执行，addSellerAccount，saveOrder数据都回滚。
 * 结论：required类型，当前如果有事务会加入事务，所以调用链在同一个事务中执行。
 
-#### 场景三：外层方法有注解(required)，内层方法有注解（requires_new）
+#### 场景四：不同service中，外层方法有注解(required)，内层方法有注解（requires_new）
 * 伪代码
 ```
 singlePay(required)->saveOrder    
@@ -175,7 +198,7 @@ singlePay(required)->saveOrder
 
 
 
-
+### 三、spring事务的实现原理
 
 
 
