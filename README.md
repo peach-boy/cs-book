@@ -57,13 +57,12 @@
     * [elasticSearch]TODO
     * [zookeeper]TODO
 * 数据库
-    * [mysql之数据类型](/docs/数据库/mysql之数据类型.md)
-    * [mysql之常用语句](/docs/数据库/mysql之常用语句.md)
-    * [mysql之查询](/docs/数据库/mysql之查询.md)
+    * [mysql之基础篇](/docs/数据库/mysql之基础篇.md)
+    * [mysql之查询优化](/docs/数据库/mysql之查询优化.md)
+    * [mysql之使用规范](/docs/数据库/mysql之使用规范.md)
     * [mysql之DML语句](/docs/数据库/mysql之DML语句.md)
     * [mysql之锁](/docs/数据库/mysql之锁.md)
     * [mysql之索引](/docs/数据库/mysql之索引.md)
-    * [mysql之事务]TODO
 * 分布式系统设计
     * [分布式锁]TODO
     * [分布式事务]TODO
