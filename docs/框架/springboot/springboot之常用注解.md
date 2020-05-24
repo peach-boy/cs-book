@@ -167,6 +167,7 @@ public Binding directBindingQueueD(DirectExchange directExchangeA) {
 ```
 * 4、bean初始化和销毁时调用的相应的方法
 >实际开发中，经常会遇到在 Bean 使用之前或使用之后做些必要的操作，Spring 对 Bean 的生命周期的操作提供了支持：我们可以通过 @Bean 注解的 initMethod 和 destrodMethod 进行指定 Bean 在初始化和销毁时需要调用相应的方法。
+
 ```
 public class MyBean {
     public void init() {
@@ -187,7 +188,3 @@ public MyBean myBean() {
     return new MyBean();
 }
 ```
-
-
-
-
