@@ -132,3 +132,62 @@ public class MybatisAutoConfiguration {
 #### 25、@ImportResource
 
 这是 Spring 3.0 添加的新注解，用来导入一个或者多个 Spring  配置文件，这对 Spring Boot 兼容老项目非常有用，因为有些配置无法通过 Java Config 的形式来配置就只能用这个注解来导入。
+
+
+#### 26、@Bean
+* 1、使用说明
+    * @bean注解在方法上
+    * @bean指示方法返回一个spring容器管理的bean,与@Service,@component的不同在于，他可以返回一个第三方库的bean,而后者只能用在自己创建的类上。
+    * @bean 一般和@Component和@Configuration一起使用
+    * @bean 默认作用域是单例，可通过@Scope("prototype")设置为原型作用域
+    * @bean 方法名首字母小写
+*2、 bean的名称
+>默认情况下bean的名称是方法名，当然也可以通过@Bean(name="directExchangeABC")指定
+```
+  @Bean
+    public DirectExchange directExchangeA() {
+        return new DirectExchange(ExchangeConstant.DIRECT_EXCHANGE_A, true, false);
+    }
+```
+* 3、@bean带参数
+>弱初始化过程中依赖其他bean，可以通过参数的方式传递，若spring容器中只有一个DirectExchange类型的bean，则不论参数取名为何都是按类型取bean，若有多个DirectExchange类型的bean,则参数取名必须为多个bean中的一个，否则报错;也可以直接调用依赖bean的构造方法，如下代码中的queueC()。
+```
+@Bean
+public DirectExchange directExchangeA() {
+    return new DirectExchange(ExchangeConstant.DIRECT_EXCHANGE_A, true, false);
+}
+@Bean
+public Queue queueC() {
+    return new Queue(QueueConstant.QUEUE_C, true, false, false);
+}
+@Bean
+public Binding directBindingQueueD(DirectExchange directExchangeA) {
+    return BindingBuilder.bind(queueC()).to(directExchangeA).with(RouteKeyConstant.ROUTEKEY_A);
+}
+```
+* 4、bean初始化和销毁时调用的相应的方法
+>实际开发中，经常会遇到在 Bean 使用之前或使用之后做些必要的操作，Spring 对 Bean 的生命周期的操作提供了支持：我们可以通过 @Bean 注解的 initMethod 和 destrodMethod 进行指定 Bean 在初始化和销毁时需要调用相应的方法。
+```
+public class MyBean {
+    public void init() {
+        System.out.println("MyBean开始初始化...");
+    }
+ 
+    public void destroy() {
+        System.out.println("MyBean销毁...");
+    }
+ 
+    public String get() {
+        return "MyBean使用...";
+    }
+}
+
+@Bean(initMethod="init", destroyMethod="destroy")
+public MyBean myBean() {
+    return new MyBean();
+}
+```
+
+
+
+

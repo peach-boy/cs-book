@@ -98,6 +98,9 @@ public @interface Transactional {
 
 ### 二、事务的嵌套
 
+这里主要套路无注解，required类型和requires_new这三种类型的组合，其他support，not_support类型等，从上面表格中的表述就能知道其作用，在此就不讨论了。
+
+
 #### 示例代码：模拟一个支付过程，1.支付单落库--->2.扣减商家和个人账户余额3--->.给下单人发红包
 ```
     public Boolean singlePay(SinglePayRequest request) {
@@ -152,8 +155,10 @@ public @interface Transactional {
 #### 场景一：同一个service中,外层方法无注解，内层方法有注解或无注解(结论显示有无注解结果一样)
 * 伪代码
 ```
-singlePay->saveOrder    
-         -> updateAccount(@Transactional)
+singlePay{
+    ->saveOrder    
+    -> updateAccount(@Transactional)
+}
 ```
 
 * 现象：substratConsumerAccount抛出异常，但是addSellerAccount，saveOrder都正常执行，不会回滚。
@@ -161,23 +166,27 @@ singlePay->saveOrder
 
 
 
-#### 场景二：不同service中,外层方法无注解，内层方法有注解
+#### 场景二：不同service中,外层方法无注解，内层方法有注解（此场景required和requires_new相同的效果）
 * 伪代码
 ```
-singlePay->saveOrder    
-         -> updateAccount(@Transactional)
-         ->sendredPacket
+singlePay{
+    ->saveOrder    
+    ->updateAccount(@Transactional)
+    ->sendredPacket
+}
 ```
 
 * 现象：substratConsumerAccount异常，addSellerAccount回滚，saveOrder不回滚。sendredPacket异常，updateAccount和saveOrder都不回滚
-* 结论：外层无事务，内层有事务
+* 结论：外层无事务，内层有事务（此场景required和requires_new相同的效果，都会新起一个事务）
 
 
 #### 场景三：不同service中，外层方法有注解(required)，内层方法有注解（required）
 * 伪代码
 ```
-singlePay(required)->saveOrder    
-                   ->updateAccount(required)
+singlePay(required){
+    ->saveOrder    
+    ->updateAccount(required)
+}
 ```
 
 * 现象：singlePay整个调用链在同一个事务中执行，addSellerAccount，saveOrder数据都回滚。
@@ -186,9 +195,11 @@ singlePay(required)->saveOrder
 #### 场景四：不同service中，外层方法有注解(required)，内层方法有注解（requires_new）
 * 伪代码
 ```
-singlePay(required)->saveOrder    
-                   ->updateAccount(requires_new)
-                   ->sendredPacket
+singlePay(required){
+    ->saveOrder    
+    ->updateAccount(requires_new)
+    ->sendredPacket
+}
 ```
 
 * 现象：singlePay和updateAccount分别处于不同的事务
