@@ -97,7 +97,9 @@
     * 领域驱动设计
         * [领域驱动设计在美团点评业务系统的实践](https://yq.aliyun.com/docss/319159?utm_content=m_38302)
         * [如何写复杂业务代码](https://yq.aliyun.com/articles/712581?spm=a2c4e.11155435.0.0.7c0d1500X9Q5mO)
-    * 敏捷开发
+* 产品与业务
+    * 支付域
+        * [支付系统组成](/docs/产品和业务/支付系统组成.md)
 * 工具
     * git
         * [git命令小记](/docs/工具/git/git命令小记.md)
