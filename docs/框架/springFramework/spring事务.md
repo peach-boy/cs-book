@@ -210,6 +210,13 @@ singlePay(required){
 
 
 ### 三、spring事务的实现原理
+#### 事务失效情况
+* 同一个类中, 一个nan-transactional的方法去调用transactional的方法, 事务会失效。未加注解，调用的不是代理类，无法实现事务。
+* 在非public方法上标注transactional, 事务无效。
 
 
+#### 原理
+Spring事务管理是通过JDK动态代理的方式进行实现的（另一种是使用CGLib动态代理实现的）
 
+
+[参考]（https://zhuanlan.zhihu.com/p/35483036）
