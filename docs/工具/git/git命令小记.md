@@ -4,6 +4,8 @@
 
  1. git checkout -b develop_XXX origin/develop （以远程的develop分支为基准建立自己的本地分支）
  2. git push origin develop_XXX（将本地develop_XXX分支提交到远程）
+ 3. git checkout -b develop_xxx commitId 以指定commitId创建分支
+ 4. git branch develop_xxx tag_name 会根据tag创建新的分支
  
 ### 删除分支
  

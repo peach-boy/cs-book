@@ -6,6 +6,7 @@
         * [应用篇](/docs/java/并发/应用篇.md)
 
     * 容器
+        * [基础篇](/docs/java/容器/基础篇.md)
         * [HashMap原理](/docs/java/容器/HashMap原理.md)
     * I/O
     * JVM
