@@ -208,6 +208,20 @@ singlePay(required){
 * 结论：required_new类型会新起一个事务，当前如果有事务会加入事务，所以调用链中会有两个事务。
 
 
+#### 场景五：不同service中，外层方法有注解(required)，内层方法无注解
+* 伪代码
+```
+singlePay(required){
+    ->saveOrder    
+    ->updateAccount
+    ->sendredPacket
+}
+```
+
+* 现象：sendredPacket抛出异常，saveOrder和updateAccount都回滚
+* 结论：required类型会起一个事务，内部方法都没加注解，真个调用链都是同一个事务。
+
+
 
 ### 三、spring事务的实现原理
 #### 事务失效情况
