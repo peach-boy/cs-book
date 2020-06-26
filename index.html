@@ -20,6 +20,9 @@
       maxLevel: 5,//最大支持渲染的标题层级
       subMaxLevel: 3,
       homepage: 'README.md',
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+      },
       loadSidebar: true,
       auto2top: true,//切换页面后是否自动跳转到页面顶部,
        //全文搜索
@@ -33,7 +36,7 @@
       }
     }
   </script>
- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
  <!--Java代码高亮-->
  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
  <!--全文搜索,直接用官方提供的无法生效-->
@@ -44,5 +47,7 @@
  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
  <!-- 字数统计 -->
  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+ <!-- 侧边栏折叠 -->
+ <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
