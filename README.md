@@ -1,31 +1,41 @@
-* [首页](README.md)
+* [首页](README.md)  
 * java
+
     * [基础篇](./docs/java/基础/基础.md)  
     * 并发
+
         * [底层原理篇](/docs/java/并发/底层原理篇.md)
         * [应用篇](/docs/java/并发/应用篇.md)
 
     * 容器
+
         * [基础篇](/docs/java/容器/基础篇.md)
         * [HashMap原理](/docs/java/容器/HashMap原理.md)
+
     * I/O
     * JVM
+
         * [JVM之内存模型](/docs/java/JVM/JVM之内存模型.md)
         * [JVM之类加载机制]TODO
         * [JVM之垃圾回收](/docs/java/JVM/JVM之垃圾回收算法.md)
+
     * java8
+
         * [java8-lambda表达式](/docs/java/java8/java8-lambda表达式.md)
         * [java8-streamApi](/docs/java/java8/java8-streamApi.md)
         * [java8-常用数据处理](/docs/java/java8/java8-常用数据处理.md)
+
     * J2EE
+
         * [如何解决跨域问题](https://juejin.im/post/5c23993de51d457b8c1f4ee1)
         * [tomcat,servlet和spring之间的关系](https://www.cnblogs.com/shawshawwan/p/9002126.html)
         * [拦截器，过滤器和切面](https://blog.csdn.net/fly910905/docs/details/86537648)
-    
     * 其他
+
         * [intercepter配合threadlocal实现线程内数据扩展](/docs/java/其他/intercepter-and-threadlocal.md)
         * [Iterator循环删除list中元素](/docs/java/其他/Iterator循环删除list中元素.md)
 * 框架
+
     * springFramework
         * [springMvc常用注解](/docs/框架/springFramework/springMvc常用注解.md)
         * [springAop]TODO
@@ -42,21 +52,21 @@
     * mybatis
         * [mybatis使用经验](/docs/框架/mybatis/mybatis使用经验.md)
     * dubbo TODO
-    * [单元测试](单元测试)
+    * 单元测试
         * [junit]TODO
         * [Mockito]TODO
-    * [日志](日志)
+    * 日志
 * 中间件
-    * [redis](中间件)
+    * redis
         * [redis专题之如何保证高性能](/docs/中间件/redis/redis专题之如何保证高性能.md)
         * [redis专题之缓存穿透，缓存击穿，缓存雪崩](/docs/中间件/redis/redis专题之缓存穿透，缓存击穿，缓存雪崩.md)
         * [redis专题之集群高可用部署方案](/docs/中间件/redis/redis专题之集群高可用部署方案.md)
-    * [rabbitmq](中间件)
+    * rabbitmq
         * [基础篇](/docs/中间件/rabbitmq/基础篇.md)
         * [进阶篇](/docs/中间件/rabbitmq/进阶篇.md)
-    * [elasticjob]TODO
-    * [elasticSearch]TODO
-    * [zookeeper]TODO
+    * elasticjob
+    * elasticSearch
+    * zookeeper
 * 数据库
     * [mysql之基础篇](/docs/数据库/mysql之基础篇.md)
     * [mysql之查询优化](/docs/数据库/mysql之查询优化.md)
@@ -105,9 +115,9 @@
 * 工具
     * git
         * [git命令小记](/docs/工具/git/git命令小记.md)
-* [网址收藏](/docs/others/网址收藏.md)
 * 代码之外
     * [搭梯子](/docs/代码之外/搭梯子.md)
+    * [网址收藏](/docs/others/网址收藏.md)
 
 
 
