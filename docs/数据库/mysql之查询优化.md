@@ -33,6 +33,7 @@ InnoDB handles SELECT COUNT(*) and SELECT COUNT(1) operations in the same way. T
 - 存在的问题：limit越往后分页，LIMIT语句的偏移量就会越大，例如：表的总行数为20000，执行limit 10000，20语句，就需要查询到符合条件的10020条数据，然后前10000条会被抛弃。
 - 优化方案
     - 1.将limit转换成where,将第一页的最后一条数据的id,作为第二页的起始id,改写为select * from table where id > lastPageId limit pageSize,以此类推。优点：不会存在越往后翻页，性能越差。缺点：需要有自增id,同时接口外观需要由通常的pageSize,pageNo，改为pageSize,lastId.
+    - 2.
 
  
 
