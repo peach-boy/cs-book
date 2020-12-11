@@ -74,10 +74,10 @@
     * [mysql之DML语句](/docs/数据库/mysql之DML语句.md)
     * [mysql之锁](/docs/数据库/mysql之锁.md)
     * [mysql之索引](/docs/数据库/mysql之索引.md)
-* 分布式系统设计
+* 系统设计
     * [分布式锁]TODO
     * [分布式事务]TODO
-    * [幂等性](/docs/分布式系统设计/幂等性.md)
+    * [幂等性](/docs/系统设计/幂等性.md)
     * [分布式会话]TODO
 * 网络与操作系统    
     * 网络协议基础TODO
