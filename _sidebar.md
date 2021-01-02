@@ -74,10 +74,10 @@
     * [mysql之DML语句](/docs/数据库/mysql之DML语句.md)
     * [mysql之锁](/docs/数据库/mysql之锁.md)
     * [mysql之索引](/docs/数据库/mysql之索引.md)
-* 分布式系统设计
+* 系统设计
     * [分布式锁]TODO
     * [分布式事务]TODO
-    * [幂等性](/docs/分布式系统设计/幂等性.md)
+    * [幂等性](/docs/系统设计/幂等性.md)
     * [分布式会话]TODO
 * 网络与操作系统    
     * 网络协议基础TODO
@@ -113,8 +113,9 @@
         * [支付系统组成](/docs/产品和业务/支付系统组成.md)
         * [支付系统之资损问题](/docs/产品和业务/支付系统之资损问题.md)
 * 工具
-    * git
-        * [git命令小记](/docs/工具/git/git命令小记.md)
+    * [git常用命令](/docs/工具/git常用命令.md)
+    * [idea快捷键](/docs/工具/idea快捷键.md)
+
 * 代码之外
     * [搭梯子](/docs/代码之外/搭梯子.md)
     * [网址收藏](/docs/others/网址收藏.md)
