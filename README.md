@@ -24,6 +24,7 @@
         * [java8-lambda表达式](/docs/java/java8/java8-lambda表达式.md)
         * [java8-streamApi](/docs/java/java8/java8-streamApi.md)
         * [java8-常用数据处理](/docs/java/java8/java8-常用数据处理.md)
+        * [java8-streamApi原理](/docs/java/java8/浅谈javaStreamApi原理.md)
 
     * J2EE
 

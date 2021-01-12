@@ -35,7 +35,7 @@
         public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
             ThreadLocalUtil.remove();
         }
-    
+    }
 
 > 直接TreadlocalUtil.get()即可获取version放入的变量
 
