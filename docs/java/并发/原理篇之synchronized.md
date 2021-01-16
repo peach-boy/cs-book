@@ -1,34 +1,20 @@
-# 并发底层原理篇
+# 原理篇之synchronized
 
-## 1.线程的生命周期
+目录
+- [1 synchronized](#1-synchronized)
+- [2 锁的升级](#2-锁的升级)
 
-#### 什么是线程
-现代操作系统在运行一个程序时，会为其创建一个进程。例如，启动一个Java程序，操作
-系统就会创建一个Java进程。现代操作系统调度的最小单元是线程，也叫轻量级进程（Light
-Weight Process），在一个进程里可以创建多个线程，这些线程都拥有各自的计数器、堆栈和局
-部变量等属性，并且能够访问共享的内存变量。处理器在这些线程上高速切换，让使用者感觉
-到这些线程在同时执行
 
-#### java线程的6种状态
-|状态名称|状态名称|说明|
-|-      |-   |-      |
-|new|初始状态|线程被创建，但是还没有调用start方法 |
-|runnable|运行状态|java线程将操作系统中的就绪和运行状态笼统地称为“运行中”|
-|blocked|阻塞状态|表示线程阻塞于锁|
-|waiting|等待状态|线程进入等待状态，表示当前线程需要等待其他线程做出一些特定动作（通知或中断）|
-|time_waiting|超时等待状态|表示可以在指定时间自行返回的|
-|terminated|终止状态|表示当前线程已经执行完毕|
+## 1. synchronized
 
-## 2.synchronized
-
-#### synchronize用法
+#### synchronized用法
 利用synchronized实现同步的基础：java中每一个对象都可以作为锁，具体表现为以下三种形式：
 - 普通同步方法：锁是当前实例的对象
 - 静态同步方法：锁的是当前类的Class对象
 - 同步方法块：锁的是synchronized括号里配置的对象
 
 
-#### synchronize底层语义原理
+#### synchronized底层语义原理
 理解synchronized首先需要了解一下java对象的内存结构，如图：
 ![](../../../pic/java/synchronized_1.png)
 
@@ -46,7 +32,7 @@ markword在64位JVM下的存储结构
 markword的状态变化
 ![](../../../pic/java/java对象内存结构_2.png)
 
-## 3.锁的升级
+## 2. 锁的升级
 java1.6为了减少获得和释放带来的性能消耗，引入了偏向锁和轻量级锁，在java1.6中，锁一共有四种状态，级别从低到高依次是：无锁状态，偏向锁，轻量级锁和重量级锁，这几种状态会随着竞争逐渐升级，锁可以升级但不能降级。
 
 #### 1.偏向锁
@@ -88,41 +74,3 @@ CAS将对象头中的Mark Word替换为指向锁记录的指针。如果成功�
 
 #### 锁的优缺点对比 
 ![](../../../pic/java/锁的升级_3.png)
-
-## 4.volatile
-
-#### volatile修饰的变量具有可见性
-- 会引起处理器缓存回写到内存
-- 个处理器的缓存回写到内存会导致其他处理器的缓存无效
-
-#### volatile禁止指令重排序（保证一致性）
-指令重排是指处理器为了提高程序运行效率，可能会对输入代码进行优化，它不保证各个语句的执行顺序同代码中的顺序一致，但是它会保证程序最终执行结果和代码顺序执行的结果是一致的。指令重排序不会影响单个线程的执行，但是会影响到线程并发执行的正确性。
-程序执行到volatile修饰变量的读操作或者写操作时，在其前面的操作肯定已经完成，且结果已经对后面的操作可见，在其后面的操作肯定还没有进行
-
-
-## 5.cas操作,unsafe类和原子类
-
-#### CAS操作
-cas是一种乐观锁的实现方式，在juc包中有大量的应用，如：AtomicInteger
-
-```
-private static final jdk.internal.misc.Unsafe U = jdk.internal.misc.Unsafe.getUnsafe();
-
-public final int incrementAndGet() {
-        return U.getAndAddInt(this, VALUE, 1) + 1;
-}
-```
-其中我们可以看到最终的cas操作是交给unsafe来实现的。
-
-#### unsafe类
-
-#### 原子类
-
-
-## 6.AbstractQueuedSynchronizer
-
-juc包中的应用
-* ReentrantLock
-* Semaphore
-* CountDownLatch
-* ThreadPoolExecutor.Worker

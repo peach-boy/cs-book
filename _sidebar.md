@@ -4,8 +4,17 @@
     * [基础篇](./docs/java/基础/基础.md)  
     * 并发
 
-        * [底层原理篇](/docs/java/并发/底层原理篇.md)
-        * [应用篇](/docs/java/并发/应用篇.md)
+        * [基础篇](/docs/java/并发/基础篇.md)
+        * [原理篇之JMM](/docs/java/并发/原理篇之JMM.md)
+        * [原理篇之重排序与hapenBefore](/docs/java/并发/原理篇之重排序与hapenBefore.md)
+        * [原理篇之synchronized](/docs/java/并发/原理篇之synchronized.md)
+        * [原理篇之volatile](/docs/java/并发/原理篇之volatile.md)
+        * [原理篇之AQS](/docs/java/并发/原理篇之AQS.md)
+        * [原理篇之线程池](/docs/java/并发/原理篇之线程池.md)
+        * [原理篇之CAS](/docs/java/并发/原理篇之CAS.md)
+        * [应用篇（一）](/docs/java/并发/应用篇（一）.md)
+        * [应用篇（二）](/docs/java/并发/应用篇（二）.md)
+
 
     * 容器
 
