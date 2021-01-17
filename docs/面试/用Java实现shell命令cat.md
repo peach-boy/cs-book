@@ -1,0 +1,1 @@
+# 用Java实现shell命令cat 1.log | grep a | sort | uniq -c | sort -rn的功能

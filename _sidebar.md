@@ -1,7 +1,7 @@
 * [首页](README.md)  
 * java
 
-    * [基础篇](./docs/java/基础/基础.md)  
+    * [基础](./docs/java/基础/基础.md)  
     * 并发
 
         * [基础篇](/docs/java/并发/基础篇.md)
@@ -94,13 +94,6 @@
     * [linux常用命令](/docs/网络与操作系统/linux常用命令.md)
     * nginxTODO
 
-* 前端
-    * vue
-        * [vue组件之间的传值](/docs/前端/vue组件之间的传值.md)
-
-* devops
-    * [devops](/docs/devops/devops.md)
-
 * 设计模式
     * 创建类
         * [单例模式](/docs/设计模式/创建类/单例模式.md)
@@ -113,6 +106,11 @@
         * [树](https://www.cnblogs.com/maybe2030/p/4732377.html)
         * [哈希表](https://www.cnblogs.com/maybe2030/p/4719267.html)
     * 算法
+* devops
+    * [devops](/docs/devops/devops.md)
+* 前端
+    * vue
+        * [vue组件之间的传值](/docs/前端/vue组件之间的传值.md)
 * 思想和规范
     * 领域驱动设计
         * [领域驱动设计在美团点评业务系统的实践](https://yq.aliyun.com/docss/319159?utm_content=m_38302)
@@ -123,10 +121,14 @@
         * [支付系统之资损问题](/docs/产品和业务/支付系统之资损问题.md)
 * 工具
     * [git常用命令](/docs/工具/git常用命令.md)
+    * [maven基础](/docs/工具/maven基础.md)
     * [idea快捷键](/docs/工具/idea快捷键.md)
+ * 面试
+    * [从输入URL到页面加载的全过程]TODO
+    * [用Java实现shell命令cat]TODO   
 
 * 代码之外
-    * [搭梯子](/docs/代码之外/搭梯子.md)
+    * [搭梯子](/docs/others/搭梯子.md)
     * [网址收藏](/docs/others/网址收藏.md)
 
 
