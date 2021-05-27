@@ -77,10 +77,8 @@
     * elasticSearch
     * zookeeper
 * 数据库
-    * [mysql之基础篇](/docs/数据库/mysql之基础篇.md)
     * [mysql之查询优化](/docs/数据库/mysql之查询优化.md)
-    * [mysql之使用规范](/docs/数据库/mysql之使用规范.md)
-    * [mysql之DML语句](/docs/数据库/mysql之DML语句.md)
+    * [mysql之事务](/docs/数据库/mysql之事务.md)
     * [mysql之锁](/docs/数据库/mysql之锁.md)
     * [mysql之索引](/docs/数据库/mysql之索引.md)
 * 系统设计
