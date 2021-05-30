@@ -1,7 +1,9 @@
 * [首页](README.md)  
 * java
 
-    * [基础](./docs/java/基础/基础.md)  
+    * [基础](./docs/java/基础/基础.md) 
+    * [序列化](./docs/java/基础/序列化.md) 
+    * [反射](./docs/java/基础/反射.md) 
     * 并发
         * [基础篇](/docs/java/并发/基础篇.md)
         * [原理篇之JMM](/docs/java/并发/原理篇之JMM.md)
