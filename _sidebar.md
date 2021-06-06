@@ -24,10 +24,10 @@
     * I/O
     * JVM
 
+        * [JVM之内存结构](/docs/java/JVM/JVM之内存结构.md)
+        * [JVM之类加载](/docs/java/JVM/JVM之类加载.md)
+        * [JVM之垃圾回收](/docs/java/JVM/JVM之垃圾回收.md)
         * [JVM之内存模型](/docs/java/JVM/JVM之内存模型.md)
-        * [JVM之类加载机制]TODO
-        * [JVM之垃圾回收](/docs/java/JVM/JVM之垃圾回收算法.md)
-        * [JMM内存模型]TODO
 
     * java8
 

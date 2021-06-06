@@ -4,6 +4,7 @@
     * [基础](./docs/java/基础/基础.md) 
     * [序列化](./docs/java/基础/序列化.md) 
     * [反射](./docs/java/基础/反射.md) 
+    * [动态代理](./docs/java/基础/动态代理.md) 
     * 并发
         * [基础篇](/docs/java/并发/基础篇.md)
         * [原理篇之JMM](/docs/java/并发/原理篇之JMM.md)
@@ -24,10 +25,10 @@
     * I/O
     * JVM
 
+        * [JVM之内存结构](/docs/java/JVM/JVM之内存结构.md)
+        * [JVM之类加载](/docs/java/JVM/JVM之类加载.md)
+        * [JVM之垃圾回收](/docs/java/JVM/JVM之垃圾回收.md)
         * [JVM之内存模型](/docs/java/JVM/JVM之内存模型.md)
-        * [JVM之类加载机制]TODO
-        * [JVM之垃圾回收](/docs/java/JVM/JVM之垃圾回收算法.md)
-        * [JMM内存模型]TODO
 
     * java8
 
