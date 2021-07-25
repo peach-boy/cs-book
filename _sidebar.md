@@ -50,8 +50,8 @@
     * springFramework
         * [spring之AOP原理]TODO
         * [spring之IOC原理]TODO
-        * [springbean的生命周期](/docs/框架/springFramework/springbean的生命周期.md)
-        * [spring事务](/docs/框架/springFramework/spring之事务原理.md)
+        * [springbean的生命周期](/docs/框架/springFramework/bean的生命周期.md)
+        * [spring事务](/docs/框架/springFramework/事务原理.md)
         * [spring常用接口](/docs/框架/springFramework/spring常用接口.md)
 
     * springboot
