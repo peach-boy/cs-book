@@ -1,4 +1,4 @@
-# mysql之事务原理（InnoDB）
+# mysql原理(三)事务
 
 
 ### 一、基本概念
@@ -32,11 +32,11 @@
 * read commited(读提交)：即事务未提交，对其他事务不可见。
 * repeatable read(可重复读):该级别保证了在同一个事务中多次读取同样的记录的结果时一致的。为innoDB的默认隔离级别
 * serializable(串行化)：最高的隔离级别。会在每读取一行数据上都加锁，所以可能导致大量的超时和锁争用问题。
->隔离级别高->低：serializable->repeatable read->read commited->read uncommited
+>隔离级别：高->低：serializable->repeatable read->read commited->read uncommited
 >隔离级别越低，事务请求的锁越少，或者保持锁的时间越短。这也是为什么大多数数据库系统的默认事务隔离级别时read uncommited.
 
 |隔离级别|脏读可能性|不可重复读可能性|幻读可能性|
-|-|-|-|-|-|
+|--|--|--|--|
 |RU	| 是|是|是|
 |RC | 否|是|是|
 |RR | 否|否| 否(innoDB为否，mvcc实现)|
