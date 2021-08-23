@@ -137,5 +137,5 @@
   - [用 Java 实现 shell 命令 cat]TODO
 
 - 代码之外
-  - [搭梯子](/docs/代码之外/搭梯子.md)
+  - [科学上网](/docs/代码之外/科学上网.md)
   - [网址收藏](/docs/others/网址收藏.md)
