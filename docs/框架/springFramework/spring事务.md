@@ -1,8 +1,8 @@
 # spring 事务原理
 
-## 一、spring 事务基本概念
+## 一、基本概念
 
-#### 1.事务隔离级别：是指若干个并发的事务之间的隔离程度
+### 1.事务隔离级别：是指若干个并发的事务之间的隔离程度
 
 在一个典型的应用程序中，多个事务同时运行，经常会为了完成他们的工作而操作同一个数据。并发虽然是必需的，但是会导致以下问题：
 
@@ -19,7 +19,7 @@
 | REPEATABLE_READ  | 否       | 该隔离级别表示一个事务在整个过程中可以多次重复执行某个查询，并且每次返回的记录都相同。即使在多次查询之间有新增的数据满足该查询，这些新增的记录也会被忽略。该级别可以防止脏读和不可重复读。 |
 | SERIALIZABLE     | 否       | 所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。但是这将严重影响程序的性能。通常情况下也不会用到该级别                         |
 
-#### 2.事务传播行为（为了解决业务层方法之间互相调用的事务问题）
+### 2.事务传播行为（为了解决业务层方法之间互相调用的事务问题）
 
 所谓事务的传播行为是指，如果在开始当前事务之前，一个事务上下文已经存在，此时有若干选项可以指定一个事务性方法的执行行为。在 TransactionDefinition 定义中包括了如下几个表示传播行为的常量：
 
@@ -33,20 +33,20 @@
 | never        | 否       | 以非事务方式运行，如果当前存在事务，则抛出异常                                                          |
 | nested       | 否       | 如果当前存在事务，则创建一个事务作为当前事务的嵌套事务来运行；如果当前没有事务，则该取值等价于 REQUIRED |
 
-#### 3.事务超时
+### 3.事务超时
 
 所谓事务超时，就是指一个事务所允许执行的最长时间，如果超过该时间限制但事务还没有完成，则自动回滚事务。在 TransactionDefinition 中以 int 的值来表示超时时间，其单位是秒.
 
 > @Transactional(timeout=30)
 
-#### 4.事务的只读属性
+### 4.事务的只读属性
 
 如果一个事务只对数据库执行读操作，那么该数据库就可能利用那个事务的只读特性，采取某些优化措施。通过把一个事务声明为只读，可以给后端数据库一个机会来应用那些它认为合适的优化措施。由于只读的优化措施是在一个事务启动时由后端数据库实施的， 因此，只有对于那些具有可能启动一个新事务的传播行为（requires_new、required、 nested）的方法来说，将事务声明为只读才有意义。
 
 > @Transactional(readOnly=true)
 > 该属性用于设置当前事务是否为只读事务，设置为 true 表示只读，false 则表示可读写，默认值为 false。
 
-#### 5.回滚规则
+### 5.回滚规则
 
 在默认设置下，事务只在出现运行时异常（runtime exception）时回滚，而在出现受检查异常（checked exception）时不回滚（这一行为和 EJB 中的回滚行为是一致的）。
 不过，可以声明在出现特定受检查异常时像运行时异常一样回滚。同样，也可以声明一个事务在出现特定的异常时不回滚，即使特定的异常是运行时异常
@@ -54,40 +54,7 @@
 - 指定单一异常类：@Transactional(rollbackFor=RuntimeException.class)
 - 指定多个异常类：@Transactional(rollbackFor={RuntimeException.class, Exception.class})
 
-#### 6.@Transactional 注解属性说明
-
-以下是@Transactional 源码：
-
-```
-@Target({ElementType.TYPE, ElementType.METHOD})
-@Retention(RetentionPolicy.RUNTIME)
-@Inherited
-@Documented
-public @interface Transactional {
-    @AliasFor("transactionManager")
-    String value() default "";
-
-    @AliasFor("value")
-    String transactionManager() default "";
-
-    Propagation propagation() default Propagation.REQUIRED;
-
-    Isolation isolation() default Isolation.DEFAULT;
-
-    int timeout() default -1;
-
-    boolean readOnly() default false;
-
-    Class<? extends Throwable>[] rollbackFor() default {};
-
-    String[] rollbackForClassName() default {};
-
-    Class<? extends Throwable>[] noRollbackFor() default {};
-
-    String[] noRollbackForClassName() default {};
-}
-
-```
+### 6.@Transactional 注解属性说明
 
 @Transactional 属性说明
 
@@ -108,56 +75,9 @@ public @interface Transactional {
 
 #### 示例代码：模拟一个支付过程，1.支付单落库--->2.扣减商家和个人账户余额 3--->.给下单人发红包
 
-```
-    public Boolean singlePay(SinglePayRequest request) {
-        //落订单库
-        saveOrder(request);
-        //更新账户,因賬戶余额不足，抛出异常
-        updateAccount(request);
-        //发放红包
-        redPacketService.sendRedPacket(request);
-        return Boolean.TRUE;
-    }
-    public void saveOrder(SinglePayRequest request) {
-        ConsumeOrderDO consumeOrderDO = new ConsumeOrderDO();
-        consumeOrderDO.setOuterTradeNo(request.getOuterTradeNo());
-        consumeOrderDO.setInnerOrderNo(appId + UUID.randomUUID().toString());
-        consumeOrderDO.setAmount(request.getTradeAmount());
-        consumeOrderDO.setStatus(1);
-        consumeOrderMapper.insert(consumeOrderDO);
-    }
+![](../../../pic/spring/spring_tranactionnal.png)
 
-    public void updateAccount(SinglePayRequest request) {
-        //商家账户增加
-        addSellerAccount(request.getSellerAccountId(), request.getTradeAmount());
-        //买家账户扣减，因賬戶余额不足，抛出异常
-        substratConsumerAccount(request.getPayerAccountId(), request.getTradeAmount());
-    }
-
-    public Boolean sendRedPacket(SinglePayRequest request) {
-         //支付金额大于100,,发放失败
-        if(request.getTradeAmount().compareTo(new BigDecimal(100))>0){
-            throw new RuntimeException("红包发放失败");
-        }
-        return Boolean.TRUE;
-    }
-     public void addSellerAccount(Integer sellerAccountId, BigDecimal tradeAmount) {
-        AccountDO accountDO = accountMapper.getById(sellerAccountId);
-        BigDecimal newBalance = accountDO.getBalance().add(tradeAmount);
-        accountMapper.update(sellerAccountId, newBalance);
-    }
-
-    public void substratConsumerAccount(Integer consumerAccountId, BigDecimal tradeAmount) {
-        AccountDO accountDO = accountMapper.getById(consumerAccountId);
-        if (accountDO.getBalance().compareTo(tradeAmount) < 0) {
-            throw new RuntimeException("你的账户余额不足");
-        }
-        BigDecimal newBalance = accountDO.getBalance().subtract(tradeAmount);
-        accountMapper.update(consumerAccountId, newBalance);
-    }
-```
-
-#### 场景一：同一个 service 中,外层方法无注解，内层方法有注解或无注解(结论显示有无注解结果一样)
+#### 场景一：同一个 service 中,外层无注解，内层有注解
 
 - 伪代码
 
@@ -169,9 +89,9 @@ singlePay{
 ```
 
 - 现象：substratConsumerAccount 抛出异常，但是 addSellerAccount，saveOrder 都正常执行，不会回滚。
-- 结论：同一个 service 中，外部无注解，内层有注解或无注解，整个调用链都会以无事务方式执行
+- 结论：事务失效，整个调用链都会以无事务方式执行
 
-#### 场景二：不同 service 中,外层方法无注解，内层方法有注解（此场景 required 和 requires_new 相同的效果）
+#### 场景二：不同 service 中,外层无注解，内层有注解（required 或 requires_new）
 
 - 伪代码
 
@@ -184,9 +104,9 @@ singlePay{
 ```
 
 - 现象：substratConsumerAccount 异常，addSellerAccount 回滚，saveOrder 不回滚。sendredPacket 异常，updateAccount 和 saveOrder 都不回滚
-- 结论：外层无事务，内层有事务（此场景 required 和 requires_new 相同的效果，都会新起一个事务）
+- 结论：此场景 required 和 requires_new 相同的效果，updateAccount 内部都会新起一个事务，外层无事务
 
-#### 场景三：不同 service 中，外层方法有注解(required)，内层方法有注解（required）
+#### 场景三：不同 service 中，外层有注解(required)，内层有注解（required）
 
 - 伪代码
 
@@ -200,7 +120,7 @@ singlePay(required){
 - 现象：singlePay 整个调用链在同一个事务中执行，addSellerAccount，saveOrder 数据都回滚。
 - 结论：required 类型，当前如果有事务会加入事务，所以调用链在同一个事务中执行。
 
-#### 场景四：不同 service 中，外层方法有注解(required)，内层方法有注解（requires_new）
+#### 场景四：不同 service 中，外层有注解(required)，内层有注解（requires_new）
 
 - 伪代码
 
@@ -217,7 +137,7 @@ singlePay(required){
   - updateAccount 抛异常，两个事务都会回滚。
 - 结论：required_new 类型会新起一个事务，当前如果有事务会加入事务，所以调用链中会有两个事务。
 
-#### 场景五：不同 service 中，外层方法有注解(required)，内层方法无注解
+#### 场景五：不同 service 中，外层有注解(required)，内层无注解
 
 - 伪代码
 
@@ -230,14 +150,14 @@ singlePay(required){
 ```
 
 - 现象：sendredPacket 抛出异常，saveOrder 和 updateAccount 都回滚
-- 结论：required 类型会起一个事务，内部方法都没加注解，真个调用链都是同一个事务。
+- 结论：required 类型会起一个事务，内部方法都会加入到事务中，整个调用链都是同一个事务。
 
 #### 事务失效情况
 
 - 同一个类中, 一个 nan-transactional 的方法去调用 transactional 的方法, 事务会失效。未加注解，调用的不是代理类，无法实现事务。
-- 在非 public 方法上标注 transactional, 事务无效。
+- 在非 public 方法上标注 transactional 不会被代理, 事务无效。
 
-## 三、spring 事务的实现原理
+## 三、实现原理
 
 #### 原理
 

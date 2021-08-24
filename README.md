@@ -4,7 +4,6 @@
   - [基础](./docs/java/基础/基础.md)
   - [序列化](./docs/java/基础/序列化.md)
   - [反射](./docs/java/基础/反射.md)
-  - [动态代理](./docs/java/基础/动态代理.md)
   - 并发
 
     - [基础篇](/docs/java/并发/基础篇.md)
@@ -15,8 +14,8 @@
     - [原理篇之 AQS](/docs/java/并发/原理篇之AQS.md)
     - [原理篇之线程池](/docs/java/并发/原理篇之线程池.md)
     - [原理篇之 CAS](/docs/java/并发/原理篇之CAS.md)
-    - [应用篇（一）](/docs/java/并发/应用篇（一）.md)
-    - [应用篇（二）](/docs/java/并发/应用篇（二）.md)
+    - [应用篇（一）](</docs/java/并发/应用篇(一).md>)
+    - [应用篇（二）](</docs/java/并发/应用篇(二).md>)
 
   - 集合
 
@@ -55,7 +54,7 @@
 
     - [spring 之 AOP 原理]TODO
     - [spring 之 IOC 原理]TODO
-    - [springbean 的生命周期](/docs/框架/springFramework/Bean的生命周期.md)
+    - [springbean 的生命周期](/docs/框架/springFramework/bean的生命周期.md)
     - [spring 事务](/docs/框架/springFramework/spring事务.md)
     - [spring 常用接口](/docs/框架/springFramework/spring常用接口.md)
 
@@ -67,7 +66,6 @@
 
   - mybatis
     - [mybatis 使用经验](/docs/框架/mybatis/mybatis使用经验.md)
-  - dubbo TODO
   - 单元测试
     - [junit]TODO
     - [Mockito]TODO
@@ -75,20 +73,19 @@
 
 - 中间件
   - 缓存
-    - [redis 专题之如何保证高性能](/docs/中间件/缓存/redis专题之如何保证高性能.md)
-    - [redis 专题之缓存穿透，缓存击穿，缓存雪崩](/docs/中间件/缓存/redis专题之缓存穿透，缓存击穿，缓存雪崩.md)
-    - [redis 专题之集群高可用部署方案](/docs/中间件/缓存/redis专题之集群高可用部署方案.md)
+    - Redis
+      - [redis 专题之如何保证高性能](/docs/中间件/缓存/Redis/redis专题之如何保证高性能.md)
+      - [redis 专题之缓存穿透，缓存击穿，缓存雪崩](/docs/中间件/缓存/Redis/redis专题之缓存穿透，缓存击穿，缓存雪崩.md)
+      - [redis 专题之集群高可用部署方案](/docs/中间件/缓存/Redis/redis专题之集群高可用部署方案.md)
   - 消息队列
-    - [rabbitmq 之基础篇](/docs/中间件/消息队列/rabbitmq之基础篇.md)
-    - [rabbitmq 之进阶篇](/docs/中间件/消息队列/rabbitmq之进阶篇.md)
-  - elasticjob
-  - elasticSearch
-  - zookeeper
+    - RabbitMQ
+      - [基础篇](/docs/中间件/消息队列/RabbitMQ/基础篇.md)
+      - [高级篇](/docs/中间件/消息队列/RabbitMQ/高级篇.md)
 - 数据库
-  - [mysql 之查询优化](/docs/数据库/mysql之查询优化.md)
-  - [mysql 之事务](/docs/数据库/mysql之事务.md)
-  - [mysql 之锁](/docs/数据库/mysql之锁.md)
-  - [mysql 之索引](/docs/数据库/mysql之索引.md)
+  - [mysql 之事务](/docs/数据库/mysql原理之事务.md)
+  - [mysql 之锁](/docs/数据库/mysql原理之锁.md)
+  - [mysql 之索引](/docs/数据库/mysql原理之索引.md)
+  - [专题篇之查询优化](/docs/数据库/专题篇之查询优化.md)
 - 系统设计
   - [分布式锁]TODO
   - [分布式事务]TODO
@@ -96,10 +93,7 @@
   - [分布式会话]TODO
 - 网络与操作系统
 
-  - 网络协议基础 TODO
-  - https 原理 TODO
   - [linux 常用命令](/docs/网络与操作系统/linux常用命令.md)
-  - nginxTODO
 
 - 设计模式
 
