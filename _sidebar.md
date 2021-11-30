@@ -110,17 +110,14 @@
   - 结构类
   - 行为类
     - [策略模式](/docs/设计模式/行为类/策略模式.md)
+    - [责任链模式](/docs/设计模式/行为类/责任链模式.md)
+    - [模版方法模式](/docs/设计模式/行为类/模版方法模式.md)
 
 - 数据结构与算法
   - 数据结构
     - [树](https://www.cnblogs.com/maybe2030/p/4732377.html)
     - [哈希表](https://www.cnblogs.com/maybe2030/p/4719267.html)
   - 算法
-- devops
-  - [devops](/docs/devops/devops.md)
-- 前端
-  - vue
-    - [vue 组件之间的传值](/docs/前端/vue组件之间的传值.md)
 - 思想和规范
   - 领域驱动设计
     - [领域驱动设计在美团点评业务系统的实践](https://yq.aliyun.com/docss/319159?utm_content=m_38302)
