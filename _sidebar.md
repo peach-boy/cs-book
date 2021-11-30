@@ -37,12 +37,6 @@
     - [java8-常用数据处理](/docs/java/java8/java8-常用数据处理.md)
     - [java8-streamApi 原理](/docs/java/java8/浅谈javaStreamApi原理.md)
 
-  - J2EE
-
-    - [如何解决跨域问题](https://juejin.im/post/5c23993de51d457b8c1f4ee1)
-    - [tomcat,servlet 和 spring 之间的关系](https://www.cnblogs.com/shawshawwan/p/9002126.html)
-    - [拦截器，过滤器和切面](https://blog.csdn.net/fly910905/docs/details/86537648)
-
   - 其他
 
     - [intercepter 配合 threadlocal 实现线程内数据扩展](/docs/java/其他/intercepter-and-threadlocal.md)
@@ -52,20 +46,15 @@
 
   - springFramework
 
-    - [spring 之 AOP 原理]TODO
-    - [spring 之 IOC 原理]TODO
-    - [springbean 的生命周期](/docs/常用框架/springFramework/bean的生命周期.md)
     - [spring 事务](/docs/常用框架/springFramework/spring事务.md)
-    - [spring 常用接口](/docs/常用框架/springFramework/spring常用接口.md)
 
   - springboot
 
     - [springboot 之 stater 原理]TODO
     - [springboot 之自动配置]TODO
-    - [springboot 之优雅停机]TODO
 
   - mybatis
-    - [mybatis 使用经验](/docs/常用框架/mybatis/mybatis使用经验.md)
+    - [mybatis 使用经验](/docs/常用框架/mybatis/mybatis常用语句.md)
 
 - 中间件
   - 缓存
@@ -96,26 +85,22 @@
   - 设计模式
 
     - 创建类
-      - [单例模式](/docs/设计模式/创建类/单例模式.md)
+      - [单例模式](/docs/代码质量/设计模式/创建类/单例模式.md)
     - 结构类
     - 行为类
-      - [策略模式](/docs/设计模式/行为类/策略模式.md)
-      - [责任链模式](/docs/设计模式/行为类/责任链模式.md)
-      - [模版方法模式](/docs/设计模式/行为类/模版方法模式.md)
+      - [策略模式](/docs/代码质量/设计模式/行为类/策略模式.md)
+      - [责任链模式](/docs/代码质量/设计模式/行为类/责任链模式.md)
+      - [模板方法模式](/docs/代码质量/设计模式/行为类/模板方法模式.md)
 
   - 领域驱动设计
   - [文章收藏](/docs/代码质量/文章收藏.md)
 
 - 数据结构与算法
+
   - 数据结构
     - [树](https://www.cnblogs.com/maybe2030/p/4732377.html)
     - [哈希表](https://www.cnblogs.com/maybe2030/p/4719267.html)
   - 算法
-- 网络与操作系统
-
-  - 网络协议基础 TODO
-  - https 原理 TODO
-  - [linux 常用命令](/docs/网络与操作系统/linux常用命令.md)
 
 - 产品与业务
 
@@ -127,7 +112,6 @@
   - 工具
     - [git 常用命令](/docs/其他/工具/git常用命令.md)
     - [maven 基础](/docs/其他/工具/maven基础.md)
-    - [idea 快捷键](/docs/其他/工具/idea快捷键.md)
   - interview
     - [笔试题](/docs/其他/interview/笔试题.md)
   - [网址收藏](/docs/其他/网址收藏.md)

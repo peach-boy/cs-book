@@ -1,6 +1,7 @@
-# mybatis使用经验
+# mybatis 常用语句
 
-#### in关键字
+#### in 关键字
+
 ```
   <if test="cardSampleIdList != null and cardSampleIdList.size()>0">
         and cardSampleId in
@@ -10,7 +11,8 @@
         </if>
 ```
 
-#### update 
+#### update
+
 ```
   update ExchangePointRecord
         <trim prefix="set" suffixOverrides=",">
@@ -30,9 +32,10 @@
         where id = #{id}
 ```
 
-#### insert(返回Id)
+#### insert(返回 Id)
 
-* mapper
+- mapper
+
 ```<insert id="add" keyProperty="id" useGeneratedKeys="true" parameterType="ExchangePointRecordDO">
         insert into ExchangePointRecord (<include refid="insert_column"/>)
         values
@@ -44,7 +47,9 @@
         )
     </insert>
 ```
-* dao
+
+- dao
+
 ```
 exchangePointRecordDao.add(exchangePointRecordDO);
 //此处exchangePointRecordDO中id已经自动设为插入后的Id
@@ -52,6 +57,7 @@ exchangePointRecordDO.getId();
 ```
 
 #### batchInsert
+
 ```
  <insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
         insert into RefundRecycleDetail (<include refid="insert_column"/>)
