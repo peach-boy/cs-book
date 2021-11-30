@@ -48,15 +48,15 @@
     - [intercepter 配合 threadlocal 实现线程内数据扩展](/docs/java/其他/intercepter-and-threadlocal.md)
     - [Iterator 循环删除 list 中元素](/docs/java/其他/Iterator循环删除list中元素.md)
 
-- 框架
+- 常用框架
 
   - springFramework
 
     - [spring 之 AOP 原理]TODO
     - [spring 之 IOC 原理]TODO
-    - [springbean 的生命周期](/docs/框架/springFramework/bean的生命周期.md)
-    - [spring 事务](/docs/框架/springFramework/spring事务.md)
-    - [spring 常用接口](/docs/框架/springFramework/spring常用接口.md)
+    - [springbean 的生命周期](/docs/常用框架/springFramework/bean的生命周期.md)
+    - [spring 事务](/docs/常用框架/springFramework/spring事务.md)
+    - [spring 常用接口](/docs/常用框架/springFramework/spring常用接口.md)
 
   - springboot
 
@@ -65,11 +65,7 @@
     - [springboot 之优雅停机]TODO
 
   - mybatis
-    - [mybatis 使用经验](/docs/框架/mybatis/mybatis使用经验.md)
-  - 单元测试
-    - [junit]TODO
-    - [Mockito]TODO
-  - 日志
+    - [mybatis 使用经验](/docs/常用框架/mybatis/mybatis使用经验.md)
 
 - 中间件
   - 缓存
@@ -81,9 +77,6 @@
     - RabbitMQ
       - [基础篇](/docs/中间件/消息队列/RabbitMQ/基础篇.md)
       - [高级篇](/docs/中间件/消息队列/RabbitMQ/高级篇.md)
-  - elasticjob
-  - elasticSearch
-  - zookeeper
 - 数据库
 
   - [mysql 之事务](/docs/数据库/mysql原理之事务.md)
@@ -91,49 +84,51 @@
   - [mysql 之索引](/docs/数据库/mysql原理之索引.md)
   - [专题篇之查询优化](/docs/数据库/专题篇之查询优化.md)
 
-- 系统设计
+- 分布式系统设计
+
   - [分布式锁]TODO
   - [分布式事务]TODO
-  - [幂等性](/docs/系统设计/幂等性.md)
+  - [幂等性](/docs/分布式系统设计/幂等性.md)
   - [分布式会话]TODO
-- 网络与操作系统
 
-  - 网络协议基础 TODO
-  - https 原理 TODO
-  - [linux 常用命令](/docs/网络与操作系统/linux常用命令.md)
-  - nginxTODO
+- 代码质量
 
-- 设计模式
+  - 设计模式
 
-  - 创建类
-    - [单例模式](/docs/设计模式/创建类/单例模式.md)
-  - 结构类
-  - 行为类
-    - [策略模式](/docs/设计模式/行为类/策略模式.md)
-    - [责任链模式](/docs/设计模式/行为类/责任链模式.md)
-    - [模版方法模式](/docs/设计模式/行为类/模版方法模式.md)
+    - 创建类
+      - [单例模式](/docs/设计模式/创建类/单例模式.md)
+    - 结构类
+    - 行为类
+      - [策略模式](/docs/设计模式/行为类/策略模式.md)
+      - [责任链模式](/docs/设计模式/行为类/责任链模式.md)
+      - [模版方法模式](/docs/设计模式/行为类/模版方法模式.md)
+
+  - 领域驱动设计
+  - [文章收藏](/docs/代码质量/文章收藏.md)
 
 - 数据结构与算法
   - 数据结构
     - [树](https://www.cnblogs.com/maybe2030/p/4732377.html)
     - [哈希表](https://www.cnblogs.com/maybe2030/p/4719267.html)
   - 算法
-- 思想和规范
-  - 领域驱动设计
-    - [领域驱动设计在美团点评业务系统的实践](https://yq.aliyun.com/docss/319159?utm_content=m_38302)
-    - [如何写复杂业务代码](https://yq.aliyun.com/articles/712581?spm=a2c4e.11155435.0.0.7c0d1500X9Q5mO)
+- 网络与操作系统
+
+  - 网络协议基础 TODO
+  - https 原理 TODO
+  - [linux 常用命令](/docs/网络与操作系统/linux常用命令.md)
+
 - 产品与业务
+
   - 支付域
     - [支付系统组成](/docs/产品和业务/支付系统组成.md)
     - [支付系统之资损问题](/docs/产品和业务/支付系统之资损问题.md)
-- 工具
-  - [git 常用命令](/docs/工具/git常用命令.md)
-  - [maven 基础](/docs/工具/maven基础.md)
-  - [idea 快捷键](/docs/工具/idea快捷键.md)
-- 面试
 
-  - [从输入 URL 到页面加载的全过程](/docs/面试/从输入URL到页面加载的全过程.md)
-  - [用 Java 实现 shell 命令 cat]TODO
-
-- 代码之外
-  - [网址收藏](/docs/others/网址收藏.md)
+- 其他
+  - 工具
+    - [git 常用命令](/docs/其他/工具/git常用命令.md)
+    - [maven 基础](/docs/其他/工具/maven基础.md)
+    - [idea 快捷键](/docs/其他/工具/idea快捷键.md)
+  - interview
+    - [笔试题](/docs/其他/interview/笔试题.md)
+  - [网址收藏](/docs/其他/网址收藏.md)
+  - [帮助文档](/docs/其他/帮助文档.md)
