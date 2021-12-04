@@ -1,21 +1,23 @@
-# spring常用接口
+# spring 常用接口
 
-### 1.InitializingBean接口
+### 1.InitializingBean 接口
 
-- 作用：实现InitializingBean接口的bean,在初始化bean时都会执行afterPropertiesSet方法
-afterPropertiesSe
- 
-- InitializingBean接口源码如下：
-``` 
+- 作用：实现 InitializingBean 接口的 bean,在初始化 bean 时都会执行 afterPropertiesSet 方法
+  afterPropertiesSe
+
+- InitializingBean 接口源码如下：
+
+```java
 public interface InitializingBean {
     void afterPropertiesSet() throws Exception;
 }
 ```
+
 - 使用实例：策略模式+InitializingBean
 - 业务场景：调用登录接口后，需要根据接口返回的不同的错误码，做出不同响应
-- 实现思路：将错误码和场景实现类的映射关系，在bean初始化时通过afterPropertiesSet初试化至Map中（仿照spring初始化beandefinition），调用时通过调用接口返回的错误码get到相应的实现类，InitializingBean在此场景中起到初始化map的作用
+- 实现思路：将错误码和场景实现类的映射关系，在 bean 初始化时通过 afterPropertiesSet 初试化至 Map 中（仿照 spring 初始化 beandefinition），调用时通过调用接口返回的错误码 get 到相应的实现类，InitializingBean 在此场景中起到初始化 map 的作用
 
-```
+```java
 /**
  * 登录场景抽象类
  *
@@ -54,9 +56,10 @@ public abstract class AbstractScene implements InitializingBean {
 
 }
 ```
+
 具体实现类：
 
-```
+```java
 /**
  * 场景一:账号存在风险
  *
@@ -116,16 +119,13 @@ public class NeedVerifyMobileScene extends AbstractScene {
 
 ```
 
+### 2.BeanPostProcessor 接口
 
+作用：BeanPostProcessor 在 bean 初始化前后做自定义处理
 
-### 2.BeanPostProcessor接口
+场景：需要自定义 swagger,使所有请求显示固定的请求头参数(自定义 Docket 类)，但是 swagger 被架构组封装到 sdk 中，所以在 BeanPostProcessor 中对 Docket 的 bean 做处理
 
-作用：BeanPostProcessor在bean初始化前后做自定义处理
-
-场景：需要自定义swagger,使所有请求显示固定的请求头参数(自定义Docket类)，但是swagger被架构组封装到sdk中，所以在BeanPostProcessor中对Docket的bean做处理
-
-
-```
+```java
 /**
  * 自定义swagger
  *
@@ -163,11 +163,3 @@ public class GiveAppBeanPostProcessor implements BeanPostProcessor {
 }
 
 ```
-
-
-
-
-
-
-
-

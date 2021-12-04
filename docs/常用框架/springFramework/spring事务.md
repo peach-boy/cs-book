@@ -81,7 +81,7 @@
 
 - 伪代码
 
-```
+```java
 singlePay{
     ->saveOrder
     -> updateAccount(@Transactional)
@@ -95,7 +95,7 @@ singlePay{
 
 - 伪代码
 
-```
+```java
 singlePay{
     ->saveOrder
     ->updateAccount(@Transactional)
@@ -110,7 +110,7 @@ singlePay{
 
 - 伪代码
 
-```
+```java
 singlePay(required){
     ->saveOrder
     ->updateAccount(required)
@@ -124,7 +124,7 @@ singlePay(required){
 
 - 伪代码
 
-```
+```java
 singlePay(required){
     ->saveOrder
     ->updateAccount(requires_new)
@@ -141,7 +141,7 @@ singlePay(required){
 
 - 伪代码
 
-```
+```java
 singlePay(required){
     ->saveOrder
     ->updateAccount

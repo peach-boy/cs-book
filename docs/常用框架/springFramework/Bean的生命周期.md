@@ -1,6 +1,6 @@
-# spring生命周期
+# spring 生命周期
 
-```
+```java
 protected void invokeInitMethods(String beanName, final Object bean, RootBeanDefinition mbd)
             throws Throwable {
 
