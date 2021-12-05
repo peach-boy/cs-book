@@ -55,9 +55,8 @@
 - 中间件
   - 缓存
     - Redis
-      - [redis 专题之如何保证高性能](/docs/中间件/缓存/Redis/redis专题之如何保证高性能.md)
+      - [redis 之基础篇](/docs/中间件/缓存/Redis/基础篇.md)
       - [redis 专题之缓存穿透，缓存击穿，缓存雪崩](/docs/中间件/缓存/Redis/redis专题之缓存穿透，缓存击穿，缓存雪崩.md)
-      - [redis 专题之集群高可用部署方案](/docs/中间件/缓存/Redis/redis专题之集群高可用部署方案.md)
   - 消息队列
     - RabbitMQ
       - [基础篇](/docs/中间件/消息队列/RabbitMQ/基础篇.md)
