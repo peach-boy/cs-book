@@ -24,7 +24,6 @@
     - [JVM 之内存结构](/docs/java/JVM/JVM之内存结构.md)
     - [JVM 之类加载](/docs/java/JVM/JVM之类加载.md)
     - [JVM 之垃圾回收](/docs/java/JVM/JVM之垃圾回收.md)
-    - [JVM 之内存模型](/docs/java/JVM/JVM之内存模型.md)
 
   - java8
 
@@ -60,7 +59,6 @@
   - 消息队列
     - RabbitMQ
       - [基础篇](/docs/中间件/消息队列/RabbitMQ/基础篇.md)
-      - [高级篇](/docs/中间件/消息队列/RabbitMQ/高级篇.md)
 - 数据库
 
   - [mysql 之事务](/docs/数据库/mysql原理之事务.md)
