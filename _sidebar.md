@@ -24,7 +24,6 @@
     - [JVM 之内存结构](/docs/java/JVM/JVM之内存结构.md)
     - [JVM 之类加载](/docs/java/JVM/JVM之类加载.md)
     - [JVM 之垃圾回收](/docs/java/JVM/JVM之垃圾回收.md)
-    - [JVM 之内存模型](/docs/java/JVM/JVM之内存模型.md)
 
   - java8
 
@@ -55,12 +54,12 @@
 - 中间件
   - 缓存
     - Redis
-      - [redis 之基础篇](/docs/中间件/缓存/Redis/基础篇.md)
-      - [redis 专题之缓存穿透，缓存击穿，缓存雪崩](/docs/中间件/缓存/Redis/redis专题之缓存穿透，缓存击穿，缓存雪崩.md)
+      - [基础篇](/docs/中间件/缓存/Redis/基础篇.md)
+      - [专题篇之分布式锁](/docs/中间件/缓存/Redis/专题篇之分布式锁.md)
+      - [专题篇之缓存穿透，击穿，雪崩](/docs/中间件/缓存/Redis/专题篇之缓存穿透，击穿，雪崩.md)
   - 消息队列
     - RabbitMQ
       - [基础篇](/docs/中间件/消息队列/RabbitMQ/基础篇.md)
-      - [高级篇](/docs/中间件/消息队列/RabbitMQ/高级篇.md)
 - 数据库
 
   - [mysql 之事务](/docs/数据库/mysql原理之事务.md)
@@ -73,7 +72,7 @@
   - [分布式锁]TODO
   - [分布式事务]TODO
   - [幂等性](/docs/分布式系统设计/幂等性.md)
-  - [分布式会话]TODO
+  - [限流](/docs/分布式系统设计/限流.md)
 
 - 代码质量
 
