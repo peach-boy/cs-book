@@ -61,10 +61,14 @@
       - [高级篇](/docs/中间件/消息队列/RabbitMQ/高级篇.md)
 - 数据库
 
-  - [mysql 之事务](/docs/数据库/mysql原理之事务.md)
-  - [mysql 之锁](/docs/数据库/mysql原理之锁.md)
-  - [mysql 之索引](/docs/数据库/mysql原理之索引.md)
-  - [专题篇之查询优化](/docs/数据库/专题篇之查询优化.md)
+  - [mysql 原理篇之体系结构](/docs/数据库/mysql原理篇之体系结构.md)
+  - [mysql 原理篇之事务](/docs/数据库/mysql原理篇之事务.md)
+  - [mysql 原理篇之锁](/docs/数据库/mysql原理篇之锁.md)
+  - [mysql 原理篇之索引](/docs/数据库/mysql原理篇之索引.md)
+  - [mysql 原理篇之 MVCC](/docs/数据库/mysql原理篇之MVCC.md)
+  - [mysql 专题篇之查询优化](/docs/数据库/mysql专题篇之查询优化.md)
+  - [mysql 专题篇之集群](/docs/数据库/mysql专题篇之集群.md)
+  - [mysql 专题篇之分大表优化](/docs/数据库/mysql专题篇之大表优化.md)
 
 - 分布式系统设计
 
