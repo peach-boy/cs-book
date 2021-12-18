@@ -2,8 +2,6 @@
 - java
 
   - [基础](./docs/java/基础/基础.md)
-  - [序列化](./docs/java/基础/序列化.md)
-  - [反射](./docs/java/基础/反射.md)
   - 并发
 
     - [基础篇](/docs/java/并发/基础篇.md)
@@ -60,6 +58,7 @@
   - 消息队列
     - RabbitMQ
       - [基础篇](/docs/中间件/消息队列/RabbitMQ/基础篇.md)
+      - [高级篇](/docs/中间件/消息队列/RabbitMQ/高级篇.md)
 - 数据库
 
   - [mysql 之事务](/docs/数据库/mysql原理之事务.md)
