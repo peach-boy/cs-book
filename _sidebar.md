@@ -39,7 +39,7 @@
 
   - springFramework
 
-    - [spring 事务](/docs/常用框架/springFramework/spring事务.md)
+    - [spring 原理篇之事务管理](/docs/常用框架/springFramework/spring原理篇之事务管理.md)
 
   - springboot
 
