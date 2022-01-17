@@ -32,8 +32,7 @@
 
   - 其他
 
-    - [intercepter 配合 threadlocal 实现线程内数据扩展](/docs/java/其他/intercepter-and-threadlocal.md)
-    - [Iterator 循环删除 list 中元素](/docs/java/其他/Iterator循环删除list中元素.md)
+    - [专题篇之 ThreadLocal](/docs/java/其他/专题篇之ThreadLocal.md)
 
 - 常用框架
 
@@ -42,9 +41,6 @@
     - [spring 原理篇之事务管理](/docs/常用框架/springFramework/spring原理篇之事务管理.md)
 
   - springboot
-
-    - [springboot 之 stater 原理]TODO
-    - [springboot 之自动配置]TODO
 
   - mybatis
     - [mybatis 使用经验](/docs/常用框架/mybatis/mybatis常用语句.md)
@@ -77,6 +73,11 @@
 
 - 代码质量
 
+  - 理论
+
+    - [设计原则](/docs/代码质量/理论/设计原则.md)
+    - [文章收藏](/docs/代码质量/理论/文章收藏.md)
+
   - 设计模式
 
     - 创建类
@@ -88,20 +89,13 @@
       - [模板方法模式](/docs/代码质量/设计模式/行为类/模板方法模式.md)
 
   - 领域驱动设计
-  - [文章收藏](/docs/代码质量/文章收藏.md)
 
 - 数据结构与算法
-
-  - 数据结构
-    - [树](https://www.cnblogs.com/maybe2030/p/4732377.html)
-    - [哈希表](https://www.cnblogs.com/maybe2030/p/4719267.html)
-  - 算法
 
 - 产品与业务
 
   - 支付域
-    - [支付系统组成](/docs/产品和业务/支付系统组成.md)
-    - [支付系统之资损问题](/docs/产品和业务/支付系统之资损问题.md)
+    - [支付系统之资损问题](/docs/产品和业务/支付域/支付系统之防资损问题.md)
 
 - 其他
   - 工具
