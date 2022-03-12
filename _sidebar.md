@@ -38,12 +38,12 @@
 
   - springFramework
 
-    - [spring 原理篇之事务管理](/docs/常用框架/springFramework/spring原理篇之事务管理.md)
+    - [原理篇之事务管理](/docs/常用框架/springFramework/spring原理篇之事务管理.md)
 
   - springboot
 
   - mybatis
-    - [mybatis 使用经验](/docs/常用框架/mybatis/mybatis常用语句.md)
+    - [mybatis 常用语句](/docs/常用框架/mybatis/mybatis常用语句.md)
 
 - 中间件
   - 缓存
